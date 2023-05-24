@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace LogicaClase
 {
-    public class Productos
+    public class Producto
     {
-        public int id { get; set; }
-        public string nombreproducto { get; set; }
-        public string codigobarras { get; set; }
-        public double precio { get; set; }
-        public  int  stock { get; set; }
-
+        public int Id { get; set; }
+        public string nombrep { get; set; }
+        public string codigo_barra { get; set; }
+        public int precio { get; set; }
+        public int stock { get; set; }
     }
 }

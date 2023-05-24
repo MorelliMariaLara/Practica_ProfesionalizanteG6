@@ -1,112 +1,104 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
+using System.Runtime.InteropServices;
 using System.Runtime.Remoting.Messaging;
+using System.Security.Cryptography;
 using System.Security.Permissions;
 using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using LogicaClase;
 
-namespace Proyecto1
+namespace Proyecto
 {
     public class Program
+
     {
         static void Main(string[] args)
         {
             Principal principal = new Principal();
 
-            while () ;
-            //mientras nuevo vendedor, hacer
             {
-                Usuario usuarioagregado = new Usuario();
-                Console.WriteLine("Agrega un usuario");
-                Console.WriteLine("Empeza por tu nombre");
-                usuarioagregado.nombre = Console.ReadLine();
+                Vendedor vendedoragregado = new Vendedor();
+                Console.WriteLine("agrega tu id ");
+                vendedoragregado.Id = int.Parse(Console.ReadLine());
 
-                Console.WriteLine("Empeza por tu nombre");
-                usuarioagregado.contraseña = Console.ReadLine();
-                Console.WriteLine("Poneme tu apellido");
-                usuarioagregado.apellido = Console.ReadLine();
+                Console.WriteLine("arranca por el nombre");
+                vendedoragregado.Nombre_vendedor = Console.ReadLine();
 
-
-                principal.AltaUsuario(usuarioagregado.nombre, usuarioagregado.comtraseña, usuarioagregado.apellido);
+                principal.altavendedor(vendedoragregado.Id, vendedoragregado.Nombre_vendedor);
             }
-           
-            while () ;
+
             {
-                Productos Productoagregado = new Productos();
+                Dueño dueñoagregado = new Dueño();
+                Console.WriteLine("agrega tu id ");
+                dueñoagregado.id = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("arranca por el nombre");
+                dueñoagregado.nombre_dueño = Console.ReadLine();
+
+                principal.altavendedor(dueñoagregado.id, dueñoagregado.nombre_dueño);
+            }
+
+            {
+                Producto Productoagregado = new Producto();
                 Console.WriteLine("agregar un producto");
 
                 Console.WriteLine("arranca por el id");
-                Productoagregado.id = int.Parse(Console.ReadLine());
+                Productoagregado.Id = int.Parse(Console.ReadLine());
 
                 Console.WriteLine("agregar el nombre");
-                Productoagregado.nombreproductos = Console.ReadLine();
+                Productoagregado.nombrep = Console.ReadLine();
 
                 Console.WriteLine("agregar el precio");
                 Productoagregado.precio = int.Parse(Console.ReadLine());
 
                 Console.WriteLine("agregar el codigo de barra");
-                Productoagregado.codigobarras = Console.ReadLine();
+                Productoagregado.codigo_barra = Console.ReadLine();
 
-                Console.WriteLine("mostrame el stock")
-                Productoagregado.stock =int.Parse(Console.ReadLine());
+                Console.WriteLine("Mostrame el stock del producto");
+                Productoagregado.stock = int.Parse(Console.ReadLine());
 
-                principal.AltaProductos(Productoagregado.id, Productoagregado.nombreproductos ,
-                    Productoagregado.precio, Productoagregado.codigobarras, Productoagregado.stock);
+                principal.altaproducto(Productoagregado.Id, Productoagregado.nombrep,
+                    Productoagregado.precio, Productoagregado.codigo_barra, Productoagregado.stock);
 
+               
             }
-            while ();
             {
-                Proveedores Proveedoragregado = new Proveedores();
+                Proveedor Proveedoragregado = new Proveedor();
                 Console.WriteLine("agregar un proveedor");
-
-                Console.WriteLine("arranca por la lista");
-                Proveedoragregado.lista = int.Parse(Console.ReadLine());
-
+                Console.WriteLine("agrega el apellido");
+                Proveedoragregado.apellido = Console.ReadLine();
                 Console.WriteLine("agregar el nombre");
-                Proveedoragregado.nombredelproveedor = Console.ReadLine();
+                Proveedoragregado.nombreproveedor = Console.ReadLine();
 
-              
+                Console.WriteLine("agregar la lista de producto");
+                Proveedoragregado.lproductos = Console.ReadLine();
 
-                principal.AltaProveedores(Proveedoragregado.lista, Proveedoragregado.nombredelproveedor);
+                principal.altaproveedor(Proveedoragregado.apellido, Proveedoragregado.nombreproveedor,
+                    Proveedoragregado.lproductos);
             }
-            while () ;
+
             {
                 Carrito Carritoagregado = new Carrito();
                 Console.WriteLine("crea tu carrito");
 
-                Console.WriteLine("agrega tu producto al carrito");
-                Carritoagregado.tipodeprod = Console.ReadLine();
+                Console.WriteLine("agregar tu producto al carrito");
+                Carritoagregado.tipo_producto = Console.ReadLine();
 
                 Console.WriteLine("este es el precio de tu producto");
-                Carritoagregado.precioporprod = Console.ReadLine();
+                Carritoagregado.precio_producto = int.Parse(Console.ReadLine());
 
-                Console.WriteLine("este es tu monto total");
-                Carritoagregado.montototal = Console.ReadLine();
-              
+                Console.WriteLine("este es el monto final");
+                Carritoagregado.final = int.Parse(Console.ReadLine());
 
-                principal.AltaCarrito(Carritoagregado.tipodeprod, Carritoagregado.precioporprod, Carritoagregado.montototal)
+                principal.altacarrito(Carritoagregado.final, Carritoagregado.precio_producto, Carritoagregado.tipo_producto);
             }
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        }
-        }
         }
     }
 }
+
+        

@@ -5,12 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Logica.de.clase
+namespace LogicaClase
 {
-    public class Dueño : Usuario 
+    public class Dueño : Usuario
     {
-        public int Id { get; set; }  
-        public Usuario UsuarioDueño { get; set; }
-
+        public int id { get; set; }
+        public string nombre_dueño { get; set; }
+        public Usuario usuariodueño { get; set; }
+        public override string validarUsuario()
+        {
+            return "hecho";
+        }
     }
 }

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace LogicaClase
 {
-    public class Proveedores : Productos 
+    public class Proveedor : Producto
     {
-        public string lista { get; set; }
-        public string nombredelproveedor { get; set;}
+        public string nombreproveedor { get; set; }
         public string apellido { get; set; }
+        public string lproductos { get; set; }
     }
 }

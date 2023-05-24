@@ -1,4 +1,4 @@
-﻿using Logica.de.clase;
+﻿using LogicaClase;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,72 +10,71 @@ namespace LogicaClase
 {
     public class Principal
     {
-        List<Usuario> ListaUsuario = new List<Usuario>();
-        List<Productos> ListaProducto = new List<Productos>();
+        List<Producto> ListaProducto = new List<Producto>();
+        List<Proveedor> ListaProveedor = new List<Proveedor>();
         List<Carrito> ListaCarrito = new List<Carrito>();
-        List<Dueño> ListaDueño = new List<Dueño>();
         List<Vendedor> ListaVendedor = new List<Vendedor>();
+        List<Dueño> Listadueño = new List<Dueño>();
 
-
-
-        public void AltaUsuario(string nombre,  string contraseña, string apellido, string Tipo)
+        public void altavendedor(int Id, string Nombre_vendedor) //parametros
         {
-            Usuario usuarionuevo = new Usuario();
-            usuarionuevo.nombre = nombre;
-            usuarionuevo.contraseña = contraseña;
-            usuarionuevo.apellido = apellido;
-            usuarionuevo.Tipo = Tipo;
-            ListaUsuario.Add(usuarionuevo);
+            Vendedor vendedornuevo = new Vendedor();
+            vendedornuevo.Id = Id;
+            vendedornuevo.Nombre_vendedor = Nombre_vendedor;
+            ListaVendedor.Add(vendedornuevo);
+        }
 
-            if (Tipo = "Vendedor")
+        public void altadueño(int id, string Nombre_dueño) //parametros
+        {
+            Dueño dueñonuevo = new Dueño();
+            dueñonuevo.id = id;
+            dueñonuevo.nombre_dueño = Nombre_dueño;
+            Listadueño.Add(dueñonuevo);
+        }
+
+        public void altaproducto(int id, string codigo_barra, int precio, string nombrep, int stock) //parametros
+        {
+            Producto productconuevo = new Producto();
+            int contadorId = 0;
+            foreach (var Producto in ListaProducto)
             {
+                if (Producto.Id != null)
+                {
+                  //OBTENER EL MAXIMO PRIMERO 
 
+
+                }
             }
-        }
-        public void AltaProducto(int id, string codigobarras, double precio, string nombreproducto, int stock)
-        {
-            Productos producto = new Productos();
-            producto.id = id + 1;
-            producto.codigobarras = codigobarras;
-            producto.precio = precio;   
-            producto.nombreproducto = nombreproducto;
-            producto.stock = stock; 
-            ListaProductos.Add(producto);
-
-        }
-        public void AltaProveedor(string lista, string nombredelproveedor, string apellido)
-        {
-            Proveedores proveedor = new Proveedores();
-            proveedor.lista = lista;
-            proveedor.nombredelproveedor = nombredelproveedor;
-            proveedor.apellido = apellido; 
-            ListaProveedores.Add(proveedor);
-
-        }
-        public void AltaCarrito(double montototal, double precioxprod, string tipodeprod)
-        {
-            Carrito carrito = new Carrito();
-            carrito.montototal = montototal;
-            carrito.precioxprod = precioxprod;
-            carrito.tipodeprod = tipodeprod;
-            ListaCarrito.Add(carrito);
-        }
-
-        public void AltaCarrito()
-
-
-
-
-
-        public List<Vendedor> mostrarlista()
-            //recorre elemento por elemento
-        { 
-           foreach (var vendedor in ListaVendedor)
-            {
+            productconuevo.Id = //obtener la variable contador  + 1;
+            productconuevo.codigo_barra = codigo_barra;
+            productconuevo.precio = precio;
+            productconuevo.nombrep = nombrep;
+            productconuevo.stock = stock;
+           
+            ListaProducto.Add(productconuevo);
             
-            }
-           return ListaVendedor;    
+
         }
 
-       
+        public void altaproveedor(string aoellido, string nombreproveedor, string lproductos) //parametros
+        {
+            Proveedor proveedorconuevo = new Proveedor();
+            proveedorconuevo.apellido = aoellido;
+            proveedorconuevo.nombreproveedor = nombreproveedor;
+            proveedorconuevo.lproductos = lproductos;
+            ListaProveedor.Add(proveedorconuevo);
+        }
+
+        public void altacarrito(double final, double precio_producto, string tipo_producto) //parametros
+        {
+            Carrito carritonuevo = new Carrito();
+            carritonuevo.final = final; ;
+            carritonuevo.precio_producto = precio_producto;
+            carritonuevo.tipo_producto = tipo_producto;
+            ListaCarrito.Add(carritonuevo);
+        }
+    }
+
+
+
 }

@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace LogicaClase
 {
-    public class Carrito : Productos
+    public class Carrito : Producto
     {
-        public double montototal { get; set; }
-
-        public double precioxprod { get; set; }
-        public string tipodeprod { get; set; }
-
-
+        public double final { get; set; }
+        public double precio_producto { get; set; }
+        public string tipo_producto { get; set; }
     }
 }

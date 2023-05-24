@@ -1,0 +1,2 @@
+C:\Users\marim\OneDrive\Documentos\GitHub\Practica_ProfesionalizanteG6\kiosco\Logica.de.clase\obj\Debug\LogicaClase.csproj.AssemblyReference.cache
+C:\Users\marim\OneDrive\Documentos\GitHub\Practica_ProfesionalizanteG6\kiosco\Logica.de.clase\obj\Debug\LogicaClase.csproj.CoreCompileInputs.cache

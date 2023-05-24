@@ -1,3 +1,6 @@
 C:\Users\marim\source\repos\kiosco\Proyecto1\obj\Debug\Proyecto1.csproj.AssemblyReference.cache
 C:\Users\marim\source\repos\kiosco\Proyecto1\obj\Debug\Proyecto1.csproj.SuggestedBindingRedirects.cache
 C:\Users\marim\source\repos\kiosco\Proyecto1\obj\Debug\Proyecto1.csproj.CoreCompileInputs.cache
+C:\Users\marim\OneDrive\Documentos\GitHub\Practica_ProfesionalizanteG6\kiosco\Proyecto1\obj\Debug\Proyecto1.csproj.AssemblyReference.cache
+C:\Users\marim\OneDrive\Documentos\GitHub\Practica_ProfesionalizanteG6\kiosco\Proyecto1\obj\Debug\Proyecto1.csproj.SuggestedBindingRedirects.cache
+C:\Users\marim\OneDrive\Documentos\GitHub\Practica_ProfesionalizanteG6\kiosco\Proyecto1\obj\Debug\Proyecto1.csproj.CoreCompileInputs.cache
